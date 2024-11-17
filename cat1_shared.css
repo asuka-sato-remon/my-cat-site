@@ -1,0 +1,130 @@
+/*全共通*/
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #333;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    color: #333;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+/*横幅を設定する共通クラス*/
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/*header-------------------------------------*/
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    flex: 1; /*flexの残り要素を埋める*/
+}
+
+.site-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .menu,
+nav .login{
+    display: flex;
+    align-items: center;
+}
+
+nav .menu li,
+nav .login li{
+    margin-right: 14px;
+}
+
+/*メインビジュアルを画面全体に広げたいが、80px分のヘッダーがあるためその分を引く。*/
+#site-title img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /*ボックスのサイズに合わせて画像を自動調整*/
+    object-fit: cover; 
+}
+
+
+/*-----------------------ここからcat_shared-------------------------------*/
+#indivisual{
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between; /*子要素に均等なスペース*/
+    margin-bottom: 60px;
+}
+
+/*親要素の幅が800pxに対して要素幅の42%*/
+#indivisual .indivisual-text{
+    width: 42%;
+}
+
+#indivisual .indivisual-text p{
+    margin-bottom: 30px;
+    text-align: justify; /*テキストを両端ぞろえにする(新聞とか)*/
+}
+
+#indivisual .indivisual-text dl{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+#indivisual .indivisual-text dt,
+#indivisual .indivisual-text dd{
+    display: inline-block; /*横並び*/
+    margin: 0; /*不均等を直す？*/
+}
+
+/*dtとdd合わせて100％にすることできれいな横並びにする*/
+#indivisual .indivisual-text dt{
+    width: 30%;
+    font-weight: bold;
+}
+
+#indivisual .indivisual-text dd{
+    width: 65%;
+    margin-left: 5%;
+}
+
+#indivisual .onecat-img{
+    width: 50%;
+    margin-right: 30px;
+}

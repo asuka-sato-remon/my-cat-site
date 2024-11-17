@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #333;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    color: #333;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+/*横幅を設定する共通クラス*/
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+
+/*---------------------------------------------*/
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    flex: 1; /*flexの残り要素を埋める*/
+}
+
+.site-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .menu,
+nav .login{
+    display: flex;
+    align-items: center;
+}
+
+nav .menu li,
+nav .login li{
+    margin-right: 14px;
+}
+
+/*-------------------------------------------------*/
+
+/*メインビジュアルを画面全体に広げたいが、80px分のヘッダーがあるためその分を引く。*/
+#site-title img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /*ボックスのサイズに合わせて画像を自動調整*/
+    object-fit: cover; 
+}
+
+/*-------------------------------------------------*/
+#news{
+    margin-bottom: 120px;
+}
+
+#news .list{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#news .list li{
+    flex: 1; /*各項目を同じ幅にする*/
+    box-sizing: border-box; /*ボーダーとパディングを含めて計算*/
+}
+
+/*最初と最後のアイテムには余白を付けない*/
+#news .list li:first-child{
+    padding-left: 0;
+}
+
+#news .list li:last-child{
+    padding-right: 0;
+    
+}
+
+/*.flexは.logoの親要素に指定*/
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo{
+    text-align: center;
+    width: 250px;
+    line-height: 1px;
+    line-height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details_link:link{
+    padding: 10px 20px;
+    color: #007BFF !important; 
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.details-link:hover{
+    text-decoration: underline;
+}
+
+/*head*/
+
+/*body*/
+.site-title{
+    margin: 0 auto; /* 画像を中央に配置したい場合 */
+}

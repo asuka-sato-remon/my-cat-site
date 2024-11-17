@@ -1,0 +1,32 @@
+body {
+    background-color: #e6e6fa;
+}
+
+html{
+    font-size: 15px; 
+}
+
+*{
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.copyright{
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #dda0dd;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.nav ul{
+    font-size: 20px;
+    margin: 30px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<!-- 最新 -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/default.css">
+<link rel="stylesheet" href="assets/css/default.date.css">
+<link rel="stylesheet" href="assets/css/default.time.css">
+<!-- クラクシック版 -->
+<!-- <link rel="stylesheet" href="assets/css/classic.css">
+<link rel="stylesheet" href="assets/css/classic.date.css">
+<link rel="stylesheet" href="assets/css/classic.time.css"> -->
+
+<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="assets/pickadate/picker.js"></script>
+<script src="assets/pickadate/picker.date.js"></script>
+<script src="assets/pickadate/picker.time.js"></script>
+<script src="assets/pickadate/legacy.js"></script>
+<script src="script.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <title>HAPPYCAT CAFE御予約</title>
+  <meta name="description" content="猫猫市にある保護猫カフェの予約ページです。ご来店を心よりお待ちしております。">
+  <meta name="viewport" content="width=device-width ,initial-scale=1">
+
+  <link rel="icon" href="icon_remon.jpg">
+  <link rel="stylesheet" href="cats[].css">
+</head>
+
+<body>
+  <header id="header">
+    <nav class="inner wrapper">
+      <div class="site-title">
+        <a href="ECsite_top.html"><img src="yoko_logo.png" alt="HAPPY CAT"></a>
+        <!--altは画像が表示されないときに表示されるテキスト。視覚障害者のための読み上げ機能もこれを採用-->
+      </div>
+    </nav>
+
+    <nav>
+      <ul class="menu">
+        <li><a href="ECsite_top.html">TOP</a></li>
+        <li><a href="#">私達について</a></li>
+        <li><a href="Cats[].html">猫一覧</a></li>
+        <li><a href="#">譲渡会🐈</a></li>
+        <li><a href="cafe.html">猫カフェ</a></li>
+        <!--#はリンクのとび先、後で正しいURLを設定する予定の空-->
+      </ul>
+      </ul>
+      <ul class="contact">
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+</header>
+</nav>
+
+<main>
+  <section class="section">
+    <div class="section_block section_block--scoped">
+      <!--section_blockクラスが基本的なスタイル、section_block--scopedが特定の範囲を修正する-->
+      <h3>☕ 予約ページ 🍰</h3>
+      <fieldset class="fieldset fieldset--demo">
+        <div class="fieldset_wrapper">
+          <div class="form-group">
+            <label>■お名前</label>
+            <input id="name" type="text" placeholder="お名前を入力してください">
+          </div>
+          <div class="form-group">
+            <label>■ふりがな</label>
+            <input id="name" type="text" placeholder="ひらがなで入力してください">
+          </div>
+          <div class="form-group">
+            <label>■人数</label>
+          <input id="number of people" type="number" placeholder="半角数字を入力してください">
+          </div>
+          <div class="form-group">
+            <label>■電話番号</label>
+            <input id="phone number" type="number" placeholder="ハイフンなし半角数字を入力してください">
+            </div>
+          <div class="form-group">
+            <label>■予約日</label>
+            <input id='date' class="fieldset__input js__datepicker" type="text" placeholder="Try me&hellip;"></br><br>
+          </div>
+          <div class="form-group">
+            <label>■予約時間</label>
+            <input id='time' class="fieldset__input js__datepicker" type="text" placeholder="Try me&hellip;"></br></br>
+          </div>
+            <button id="submit" class="fieldset__button button button--small">予約</button>
+        </div>
+        <div id="result"></div>
+      </fieldset>
+    </div>
+  </section>
+</main>
+
+<style>
+main {
+  width: 80%;  /* 幅を80%に設定 */
+  max-width: 1000px;  /* 最大幅を指定 */
+  margin: 0 auto;  /* 中央寄せ */
+}
+
+#submit{
+    font-size: 25px;
+    padding: 15px 30px; 
+    width: 100%;
+    background-color: #b0c4de;  /* 青色の背景 */
+    color: white;  /* 文字色を白に変更 */
+    border: none;  /* 枠線をなくす */
+    border-radius: 5px;  /* 角を丸くする */
+    cursor: pointer;  /* ポインタを表示 */
+}
+
+#submit:hover {
+    background-color: lavender;  /* ホバー時に色を変更 */
+}
+
+#date, #time{
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+}
+
+/*
+タグに対するスタイル --> そのまま
+クラス名に対するスタイル --> ドット.
+IDに対するスタイル --> #
+*/
+
+h3{
+  text-align: center;
+  font-size: 25px;
+}
+.form-group{
+  margin-bottom: 20px;
+}
+
+label{
+  display: block; /*ラベルを入力欄の上に配置*/
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+input{
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+fieldset {
+    width: 100%;  /* 幅を親要素に合わせる */
+    max-width: 800px;  /* 最大幅を設定 */
+    margin: 0 auto;  /* 中央寄せ */
+    border: 3px solid #b0c4de;  /* 黒い枠線 */
+    padding: 20px;  /* 内部の余白 */
+    box-sizing: border-box;  /* paddingを含めてサイズを調整 */
+}
+
+</style>
+</body>
+</html>
+
+

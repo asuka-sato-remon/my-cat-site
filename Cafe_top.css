@@ -1,0 +1,160 @@
+/*全共通*/
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #333;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    color: #333;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+/*横幅を設定する共通クラス*/
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/*header-------------------------------------*/
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    flex: 1; /*flexの残り要素を埋める*/
+}
+
+.site-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .menu,
+nav .login{
+    display: flex;
+    align-items: center;
+}
+
+nav .menu li,
+nav .login li{
+    margin-right: 14px;
+}
+
+/*メインビジュアルを画面全体に広げたいが、80px分のヘッダーがあるためその分を引く。*/
+#site-title img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /*ボックスのサイズに合わせて画像を自動調整*/
+    object-fit: cover; 
+}
+
+
+/*-----------------------ここからCafe_top.css-------------------------------*/
+.flex{
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.flex .image{
+    width: 50%;
+    margin-right: 50px;
+}
+
+.flex .image img{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    /*高さを固定したまま画面幅に合わせて拡大縮小*/
+}
+
+.flex .menu{
+    width: 50%;
+    padding: 40px 5% 0 5%;
+}
+
+.flex .menu .page-title{
+    font-size: 1.75rem;
+    /*通常サイズは1rem*/
+    margin-bottom: 20px;
+}
+
+.flex .menu .content-title{
+    border-bottom: solid 1px #ccc;
+    /*要素の下に普通の線、灰色*/
+    font-size: 1.25rem;
+    padding-bottom: 5px;
+    margin: 40px 0 15px 0;
+}
+
+.flex .menu .cafetime-list,
+.flex .menu .cafemenu-list{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px 0;
+    width: 100%;
+}
+
+.flex .menu .cafetime-list dt,
+.flex .menu .cafemenu-list dt{
+    border-bottom: dotted 1px #ccc;
+    /*dottedは点線*/
+    padding-right: 10px;
+}
+
+.flex .menu .cafetime-list dd,
+.flex .menu .cafemenu-list dd{
+    border-bottom: dotted 1px #ccc;
+    padding-bottom: 10px;
+    text-align: right;
+}
+
+/*----------------------------------------*/
+
+.flex .recipe .step-list li{
+    border-bottom: dotted 1px #ccc;
+    padding: 6px 0;
+    margin-left: 20px;
+}
+
+.btn{
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.btn a{
+    display: inline-block;
+    /*aタグに幅と高さを持たせる*/
+    border: solid 1px #2b2a27;
+    font-size: 1.2rem;
+    padding: 18px 60px;
+    text-decoration: none;
+}

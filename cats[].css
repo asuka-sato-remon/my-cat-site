@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: #333;
+    font-size: 0.875rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+a{
+    color: #333;
+    font-size: 0.875rem;
+    text-decoration: none;
+}/*全共通*/
+
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+/*横幅を設定する共通クラス*/
+.wrapper{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/*header-------------------------------------*/
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    flex: 1; /*flexの残り要素を埋める*/
+}
+
+.site-title{
+    margin: 0 auto;
+    text-align: center;
+}
+
+nav{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .menu,
+nav .login{
+    display: flex;
+    align-items: center;
+}
+
+nav .menu li,
+nav .login li{
+    margin-right: 14px;
+}
+
+/*メインビジュアルを画面全体に広げたいが、80px分のヘッダーがあるためその分を引く。*/
+#site-title img{
+    width: 100%;
+    height: calc(100vh - 80px);
+    /*ボックスのサイズに合わせて画像を自動調整*/
+    object-fit: cover; 
+}
+
+/*TOP_Cats[]----------------------------------*/
+
+.cat-list{
+    display: grid;
+    /*gridを指定すると子要素が自動的に行と列として配置*/
+    grid-template-columns: repeat(3, 1fr);
+    /*3つの同じ幅のスペースを作る。1frは1/3*/
+    gap: 35px;
+}
+
+.cat-list p{
+    font-size: 0.75rem;
+}
+
+.cat-list img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /*縦横比を維持してサイズに収める*/
+}
+
+.pagination{
+    display: flex; /*水平に配置*/
+    justify-content: center; 
+    margin-top: 40px; /*上に40pxの間隔*/
+}
+
+.pagination li{
+    padding: 0 20px;
+}
